@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Игра</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RPG Мир Приключений</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Об игре</a></li>
+                    <li><a href="#bonus">Бонус-коды</a></li>
+                    <li><a href="#roulette">Рулетка</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2>О нашей игре</h2>
+            <p>Погрузитесь в уникальный мир приключений, квестов и боевых сражений. Станьте частью нашей вселенной, где каждое решение влияет на вашу судьбу!</p>
+        </div>
+    </section>
+
+    <section id="bonus" class="content-section dark-bg">
+        <div class="container">
+            <h2>Купить бонус-код</h2>
+            <p>Получите эксклюзивные предметы и улучшения, купив бонус-код!</p>
+            <form id="bonusForm">
+                <input type="text" id="code" name="code" placeholder="Введите бонус-код">
+                <button type="submit">Купить</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <section id="roulette" class="content-section">
+        <div class="container">
+            <h2>Рулетка бонус-кодов</h2>
+            <div class="roulette-container">
+                <div class="roulette-wheel" id="rouletteWheel">
+                    <!-- Сегменты будут созданы через JS -->
+                </div>
+                <button id="spinButton">Крутить рулетку</button>
+                <div id="wonCode" class="hidden">
+                    <p>Ваш бонус-код: <span id="code"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Для связи: <a href="mailto:info@rpg-game.com">info@rpg-game.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 RPG Мир Приключений. Все права защищены. (команда нубов)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

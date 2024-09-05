@@ -1,0 +1,196 @@
+/* Плавные переходы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для хедера */
+header {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Стили для секций */
+.content-section {
+    padding: 60px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dark-bg {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.dark-bg h2 {
+    color: #ecf0f1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form input {
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #2ecc71;
+    text-align: center;
+}
+
+/* Стили рулетки */
+.roulette-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.roulette-wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ecf0f1;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: conic-gradient(#3498db 0% 20%, #ecf0f1 20% 40%, #3498db 40% 60%, #ecf0f1 60% 80%, #3498db 80% 100%);
+    transform-origin: center;
+}
+
+button#spinButton {
+    padding: 15px 30px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button#spinButton:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#wonCode p {
+    font-size: 1.5em;
+    color: #27ae60;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
